@@ -12,12 +12,12 @@ setopt interactivecomments                                      # Allow comments
 
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' # Case insensitive tab completion
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
-zstyle ':completion:*' rehash true                              # automatically find new executables in path 
+zstyle ':completion:*' rehash true                              # automatically find new executables in path
 HISTFILE=~/.zhistory
 HISTSIZE=1000
 SAVEHIST=500
-export EDITOR=/usr/bin/nano
-export VISUAL=/usr/bin/nano
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
 WORDCHARS=${WORDCHARS//[\/&.;]}                                 # Don't consider certain characters part of the word
 
 alias cp="cp -i"
@@ -47,14 +47,14 @@ bindkey '^[[1;5C' forward-word                                  #
 bindkey '^H' backward-kill-word                                 # delete previous word with ctrl+backspace
 bindkey '^[[Z' undo                                             # Shift+tab undo last action
 
-## Theming section  
+## Theming section
 autoload -Uz compinit colors zcalc
 compinit
 colors
 
 # enable substitution for prompt
 setopt prompt_subst
-# bash style prompt 
+# bash style prompt
 PROMPT='[%n@%m %1~]%# '
 # Right prompt with exit status of previous command if not successful
 RPROMPT='%(?..%F{red}[%?]%f)'
