@@ -46,7 +46,7 @@ To install this configuration manually, simply follow these steps:
   cp zsh-config/.zshrc ~/.zshrc
   ```
 
-### Automatic Installation
+### Automatic Installation For Arch(Arch-based)
 
 - To install this configuration automatically use the command bellow:
   ```
