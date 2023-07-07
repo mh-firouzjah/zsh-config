@@ -92,7 +92,7 @@ bindkey '^[[B' history-substring-search-down
 if [[ -r /usr/share/zsh/functions/command-not-found.zsh ]]; then
     source /usr/share/zsh/functions/command-not-found.zsh
 else
-    source ./command-not-found.zsh
+    source ~/.config/zsh/command-not-found.zsh
 fi
 export PKGFILE_PROMPT_INSTALL_MISSING=1
 

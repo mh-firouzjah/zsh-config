@@ -24,7 +24,7 @@
     if [[ -e /usr/share/zsh/p10k-portable.zsh ]]; then
       source /usr/share/zsh/p10k-portable.zsh
     else
-      source ./p10k-portable.zsh
+      source ~/.config/zsh/p10k-portable.zsh
     fi
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=black,bold'
   else
@@ -32,7 +32,7 @@
     if [[ -e /usr/share/zsh/p10k-portable.zsh ]]; then
       source /usr/share/zsh/p10k.zsh
     else
-      source ./p10k.zsh
+      source ~/.config/zsh/p10k.zsh
     fi
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
   fi
