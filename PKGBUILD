@@ -16,7 +16,6 @@ depends=('zsh-autosuggestions'
 	'zsh-history-substring-search'
 	'zsh'
 	'pkgfile'
-	'nerd-fonts-noto-sans-mono'
 	'zsh-theme-powerlevel10k')
 source=("$pkgname.tar.gz::$url/archive/$_gitcommit.tar.gz")
 install=manjaro-zsh-config.install
