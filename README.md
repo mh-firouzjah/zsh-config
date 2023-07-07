@@ -8,10 +8,11 @@ It's designed to work on Linux and macOS systems and can be easily installed and
 
 Some of the notable features included in this configuration are:
 
-- A custom prompt that includes Git integration and the ability to display the current Python virtual environment.
-- A variety of useful aliases and functions, including shortcuts for common commands like ls, cd, and grep.
+- A custom prompt that includes `Git integration` and the ability to display the current `Python virtual environment`.
+- A variety of useful aliases and functions, including shortcuts for common commands like `ls`, `cd`, and `grep`.
 - Auto-completion for many common commands and options.
 - Syntax highlighting for commands and file types.
+- Suggestion to install possible packages on command not found situations.
 
 ## Installation
 
