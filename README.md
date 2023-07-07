@@ -50,7 +50,7 @@ To install this configuration manually, simply follow these steps:
 
 - To install this configuration automatically use the command bellow:
   ```
-  bash <(curl -s https://raw.githubusercontent.com/mh-firouzjah/zsh-config/main/install.sh)
+  bash <(curl -s https://raw.githubusercontent.com/mh-firouzjah/zsh-config/master/install.sh)
   ```
 
 ### Optional
