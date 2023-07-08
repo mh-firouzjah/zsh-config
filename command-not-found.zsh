@@ -8,13 +8,17 @@ command_not_found_handler() {
     setopt shwordsplit
     pkg_array=($pkgs[@])
     pkgname="${${(@s:/:)pkg_array}[2]}"
-    printf 'Do you want to Install package %s? (y/N) ' $pkgname
+    printf 'Do you want to install package %s? (y/N) ' $pkgname
     if read -q "choice? "; then
-    		echo
-    		echo "Executing command: pacman -S $pkgname"
-            pacman -S $pkgname
+      echo
+      echo "Installing package $pkgname..."
+      if sudo pacman -S $pkgname; then
+        echo "Package $pkgname successfully installed."
+      else
+        echo "Error: Failed to install package $pkgname."
+      fi
     else
-    		echo " "
+      echo " "
     fi
   else
     printf 'zsh: command not found: %s\n' "$cmd"
