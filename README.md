@@ -77,6 +77,9 @@ copy `./p10k.zsh` to the home directory of appropriate user.
 
 - If your terminal does not support `p10k.zsh` try the `./p10k-portable.zsh`
 
+- If you're not on Arch or an Arch-Based distro, you may neeed to clone these repositories and change some config files in order to make it work:
+  - `git clone https://github.com/zsh-users/zsh-history-substring-search ~/.config/zsh/plugins/zsh-history-substring-search`
+  - `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh/plugins/powerlevel10k`
 
 ## Customization
 
