@@ -14,5 +14,4 @@ else
 fi
 
 # Remove folder background on `ls` command
-LS_COLORS=$LS_COLORS:'tw=00;33:ow=01;33:';
-export LS_COLORS
+zstyle ':completion:*' list-colors
