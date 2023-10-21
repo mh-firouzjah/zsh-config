@@ -19,3 +19,4 @@ fi
 
 # Remove folder background on `ls` command
 zstyle ':completion:*' list-colors
+export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
