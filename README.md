@@ -4,6 +4,10 @@ This is a custom Zsh configuration that includes a variety of useful features an
 
 It's designed to work on Linux and macOS systems and can be easily installed and customized to suit your needs.
 
+Also it is inspired by `mankaro-zsh-configuration` but it supports all Linux Distributions. The following is screenshot of Kubuntu terminal:
+
+![Screenshot](./Screenshot.png)
+
 ## Features
 
 Some of the notable features included in this configuration are:
@@ -16,49 +20,53 @@ Some of the notable features included in this configuration are:
 
 ## Installation
 
+### Automatic Installation
+
+- Use the command bellow:
+
+  ```sh
+  bash <(curl -s https://raw.githubusercontent.com/mh-firouzjah/zsh-config/master/install.sh)
+  ```
+
 ### Manual Installation
 
 To install this configuration manually, simply follow these steps:
 
-- Install required packages
-  ```
-  sudo pacman -S \
-  zsh \
-  zsh-autosuggestions \
-  zsh-completions \
-  zsh-history-substring-search \
-  zsh-syntax-highlighting \
-  zsh-theme-powerlevel10k \
-  pkgfile
-  ```
+- Clone required repositories to your home directory
 
-- Update `pkgfile` database so to be able to recommend packages
-  ```
-  pkgfile -u
-  ```
-
-- Clone the repository to your local machine
-  ```
+  ```sh
   git clone https://github.com/mh-firouzjah/zsh-config.git ~/.config/zsh
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh/plugins/powerlevel10k
+  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-completions ~/.config/zsh/plugins/zsh-completions
+  git clone https://github.com/zsh-users/zsh-history-substring-search ~/.config/zsh/plugins/zsh-history-substring-search
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/plugins/zsh-syntax-highlighting
   ```
 
 - Copy the `.zshrc` file to your home directory
-  ```
+
+  ```sh
   cp zsh-config/.zshrc ~/.zshrc
   ```
 
-### Automatic Installation For Arch(Arch-based)
+- Arch Linux
+  - Install required packages
 
-- To install this configuration automatically use the command bellow:
-  ```
-  bash <(curl -s https://raw.githubusercontent.com/mh-firouzjah/zsh-config/master/install.sh)
-  ```
+    ```sh
+    sudo pacman -S pkgfile
+    ```
+
+  - Update `pkgfile` database so to be able to recommend packages
+
+    ```sh
+    pkgfile -u
+    ```
 
 ### Optional
 
 - For root user copy `./rootzshrc` to the home of root user
 
-```
+```sh
 sudo cp ~/.config/zsh/rootzshrc /root/.zsh
 ```
 
@@ -71,15 +79,16 @@ sudo cp ~/.config/zsh/rootzshrc /root/.zsh
 - If powerlevel10k is asking for and generating a new prompt interface
 different from what is manjaro's default zsh theme,
 copy `./p10k.zsh` to the home directory of appropriate user.
-  ```
-  cp ./p10k.zsh ~/.p10k.zsh
+
+  ```sh
+  cp ~/.config/zsh/modules/p10k.zsh ~/.p10k.zsh
   ```
 
-- If your terminal does not support `p10k.zsh` try the `./p10k-portable.zsh`
+- If your terminal does not support `p10k.zsh` try:
 
-- If you're not on Arch or an Arch-Based distro, you may neeed to clone these repositories and change some config files in order to make it work:
-  - `git clone https://github.com/zsh-users/zsh-history-substring-search ~/.config/zsh/plugins/zsh-history-substring-search`
-  - `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh/plugins/powerlevel10k`
+  ```sh
+  cp ~/.config/zsh/modules/p10k-portable.zsh ~/.p10k.zsh
+  ```
 
 ## Customization
 
