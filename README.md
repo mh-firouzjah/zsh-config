@@ -35,18 +35,18 @@ To install this configuration manually, simply follow these steps:
 - Clone required repositories to your home directory
 
   ```sh
-  git clone https://github.com/mh-firouzjah/zsh-config.git ~/.config/zsh
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh/plugins/powerlevel10k
-  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/plugins/zsh-autosuggestions
-  git clone https://github.com/zsh-users/zsh-completions ~/.config/zsh/plugins/zsh-completions
-  git clone https://github.com/zsh-users/zsh-history-substring-search ~/.config/zsh/plugins/zsh-history-substring-search
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/plugins/zsh-syntax-highlighting
+  git clone https://github.com/mh-firouzjah/zsh-config.git ~/.zsh
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh/plugins/powerlevel10k
+  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-completions ~/.zsh/plugins/zsh-completions
+  git clone https://github.com/zsh-users/zsh-history-substring-search ~/.zsh/plugins/zsh-history-substring-search
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/plugins/zsh-syntax-highlighting
   ```
 
 - Copy the `.zshrc` file to your home directory
 
   ```sh
-  cp zsh-config/.zshrc ~/.zshrc
+  cp ~/.zsh/.zshrc ~/.zshrc
   ```
 
 - Arch Linux
@@ -67,7 +67,7 @@ To install this configuration manually, simply follow these steps:
 - For root user copy `./rootzshrc` to the home of root user
 
 ```sh
-sudo cp ~/.config/zsh/rootzshrc /root/.zsh
+sudo cp ~/.zsh/rootzshrc /root/.zsh
 ```
 
 ### Finally
@@ -81,13 +81,13 @@ different from what is manjaro's default zsh theme,
 copy `./p10k.zsh` to the home directory of appropriate user.
 
   ```sh
-  cp ~/.config/zsh/modules/p10k.zsh ~/.p10k.zsh
+  cp ~/.zsh/modules/p10k.zsh ~/.p10k.zsh
   ```
 
 - If your terminal does not support `p10k.zsh` try:
 
   ```sh
-  cp ~/.config/zsh/modules/p10k-portable.zsh ~/.p10k.zsh
+  cp ~/.zsh/modules/p10k-portable.zsh ~/.p10k.zsh
   ```
 
 ## Customization

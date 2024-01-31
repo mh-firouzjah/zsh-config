@@ -1,8 +1,8 @@
 () {
   emulate -L zsh
 
-  source  ~/.config/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
-  source  ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source  ~/.zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
+  source  ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
   # Determine terminal capabilities.
   {
@@ -21,11 +21,11 @@
 
   if [[ $USE_POWERLINE == false ]]; then
     # Use 8 colors and ASCII.
-    source  ~/.config/zsh/modules/p10k-portable.zsh
+    source  ~/.zsh/modules/p10k-portable.zsh
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=black,bold'
   else
     # Use 256 colors and UNICODE.
-    source  ~/.config/zsh/modules/p10k.zsh
+    source  ~/.zsh/modules/p10k.zsh
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
   fi
 }

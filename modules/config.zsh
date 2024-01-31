@@ -79,9 +79,9 @@ export LESS=-R
 
 ## Plugins section: Enable fish style features
 # Use syntax highlighting
-source  ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source  ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Use history substring search
-source  ~/.config/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source  ~/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 # bind UP and DOWN arrow keys to history substring search
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
@@ -90,7 +90,7 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 # Offer to install missing package if command is not found
-source  ~/.config/zsh/modules/command-not-found.zsh
+source  ~/.zsh/modules/command-not-found.zsh
 export PKGFILE_PROMPT_INSTALL_MISSING=1
 
 # Set terminal window and tab/icon title

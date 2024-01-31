@@ -5,8 +5,8 @@ USE_POWERLINE="true"
 #    is not a diamond
 HAS_WIDECHARS="false"
 
-source ~/.config/zsh/modules/config.zsh
-source ~/.config/zsh/modules/prompt.zsh
+source ~/.zsh/modules/config.zsh
+source ~/.zsh/modules/prompt.zsh
 
 # Remove folder background on `ls` command
 zstyle ':completion:*' list-colors
