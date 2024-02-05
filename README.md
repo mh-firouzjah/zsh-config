@@ -20,6 +20,27 @@ Some of the notable features included in this configuration are:
 
 ## Installation
 
+### Preparations
+
+- Install required packages
+  - Arch Linux
+
+    ```sh
+    sudo pacman -S pkgfile
+    ```
+
+    - Update `pkgfile` database so to be able to recommend packages
+
+      ```sh
+      pkgfile -u
+      ```
+
+  - Debian/Ubuntu
+
+    ```sh
+    sudo apt install command-not-found
+    ```
+
 ### Automatic Installation
 
 - Use the command bellow:
@@ -30,7 +51,7 @@ Some of the notable features included in this configuration are:
 
 ### Manual Installation
 
-To install this configuration manually, simply follow these steps:
+To install this configuration manually, follow these steps:
 
 - Clone required repositories to your home directory
 
@@ -48,27 +69,6 @@ To install this configuration manually, simply follow these steps:
   ```sh
   cp ~/.zsh/.zshrc ~/.zshrc
   ```
-
-- Arch Linux
-  - Install required packages
-
-    ```sh
-    sudo pacman -S pkgfile
-    ```
-
-  - Update `pkgfile` database so to be able to recommend packages
-
-    ```sh
-    pkgfile -u
-    ```
-
-### Optional
-
-- For root user copy `./rootzshrc` to the home of root user
-
-```sh
-sudo cp ~/.zsh/rootzshrc /root/.zsh
-```
 
 ### Finally
 
