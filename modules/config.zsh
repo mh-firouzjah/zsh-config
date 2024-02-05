@@ -90,7 +90,11 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 # Offer to install missing package if command is not found
-source  ~/.zsh/modules/command-not-found.zsh
+if [[ -f /etc/zsh_command_not_found ]]; then
+  source /etc/zsh_command_not_found
+else
+  source  ~/.zsh/modules/command-not-found.zsh
+fi
 export PKGFILE_PROMPT_INSTALL_MISSING=1
 
 # Set terminal window and tab/icon title
