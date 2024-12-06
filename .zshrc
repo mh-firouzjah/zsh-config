@@ -11,3 +11,7 @@ source ~/.zsh/modules/prompt.zsh
 # Remove folder background on `ls` command
 zstyle ':completion:*' list-colors
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
+
+alias ls='eza -hl --icons --no-time --no-user --git'
+
+export PATH="$PATH:~/.local/bin"
