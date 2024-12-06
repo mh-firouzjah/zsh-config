@@ -1,8 +1,8 @@
 () {
   emulate -L zsh
 
-  source  ~/.zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
-  source  ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source  $HOME/.zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
+  source  $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
   # Determine terminal capabilities.
   {
@@ -14,18 +14,18 @@
       # Define alias `x` if our parent process is `login`.
       local parent
       if { parent=$(</proc/$PPID/comm) } && [[ ${parent:t} == login ]]; then
-        alias x='startx ~/.xinitrc'
+        alias x='startx $HOME/.xinitrc'
       fi
     fi
   } 2>/dev/null
 
   if [[ $USE_POWERLINE == false ]]; then
     # Use 8 colors and ASCII.
-    source  ~/.zsh/modules/p10k-portable.zsh
+    source  $HOME/.zsh/modules/p10k-portable.zsh
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=black,bold'
   else
     # Use 256 colors and UNICODE.
-    source  ~/.zsh/modules/p10k.zsh
+    source  $HOME/.zsh/modules/p10k.zsh
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
   fi
 }

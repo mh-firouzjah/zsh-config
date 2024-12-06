@@ -56,23 +56,23 @@ To install this configuration manually, follow these steps:
 - Clone required repositories to your home directory
 
   ```sh
-  git clone https://github.com/mh-firouzjah/zsh-config.git ~/.zsh
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh/plugins/powerlevel10k
-  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/plugins/zsh-autosuggestions
-  git clone https://github.com/zsh-users/zsh-completions ~/.zsh/plugins/zsh-completions
-  git clone https://github.com/zsh-users/zsh-history-substring-search ~/.zsh/plugins/zsh-history-substring-search
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/plugins/zsh-syntax-highlighting
+  git clone https://github.com/mh-firouzjah/zsh-config.git $HOME/.zsh
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.zsh/plugins/powerlevel10k
+  git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.zsh/plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-completions $HOME/.zsh/plugins/zsh-completions
+  git clone https://github.com/zsh-users/zsh-history-substring-search $HOME/.zsh/plugins/zsh-history-substring-search
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.zsh/plugins/zsh-syntax-highlighting
   ```
 
 - Copy the `.zshrc` file to your home directory
 
   ```sh
-  cp ~/.zsh/.zshrc ~/.zshrc
+  cp $HOME/.zsh/.zshrc $HOME/.zshrc
   ```
 
 ### Finally
 
-- Restart your terminal or run `source ~/.zshrc` to apply the changes.
+- Restart your terminal or run `source $HOME/.zshrc` to apply the changes.
 
 ### Exception
 
@@ -81,13 +81,13 @@ different from what is manjaro's default zsh theme,
 copy `./p10k.zsh` to the home directory of appropriate user.
 
   ```sh
-  cp ~/.zsh/modules/p10k.zsh ~/.p10k.zsh
+  cp $HOME/.zsh/modules/p10k.zsh $HOME/.p10k.zsh
   ```
 
 - If your terminal does not support `p10k.zsh` try:
 
   ```sh
-  cp ~/.zsh/modules/p10k-portable.zsh ~/.p10k.zsh
+  cp $HOME/.zsh/modules/p10k-portable.zsh $HOME/.p10k.zsh
   ```
 
 ## Customization

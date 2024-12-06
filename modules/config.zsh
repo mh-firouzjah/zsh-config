@@ -19,8 +19,8 @@ zstyle ':completion:*' menu select                              # Highlight menu
 # Speed up completions2
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ~/.zsh/cache
-HISTFILE=~/.zhistory
+zstyle ':completion:*' cache-path $HOME/.zsh/cache
+HISTFILE=$HOME/.zhistory
 HISTSIZE=10000
 SAVEHIST=10000
 #export EDITOR=/usr/bin/nano
@@ -79,9 +79,9 @@ export LESS=-R
 
 ## Plugins section: Enable fish style features
 # Use syntax highlighting
-source  ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source  $HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Use history substring search
-source  ~/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source  $HOME/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 # bind UP and DOWN arrow keys to history substring search
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
@@ -93,7 +93,7 @@ bindkey '^[[B' history-substring-search-down
 if [[ -f /etc/zsh_command_not_found ]]; then
   source /etc/zsh_command_not_found
 else
-  source  ~/.zsh/modules/command-not-found.zsh
+  source  $HOME/.zsh/modules/command-not-found.zsh
 fi
 export PKGFILE_PROMPT_INSTALL_MISSING=1
 
