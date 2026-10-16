@@ -1,0 +1,17 @@
+# Core Zim environment, input, and completion.
+zmodule environment
+zmodule input
+zmodule termtitle
+zmodule zsh-users/zsh-completions --fpath src
+zmodule completion
+
+# Prompt data and the published Tokyo Night theme.
+zmodule duration-info
+zmodule git-info
+zmodule prompt-pwd
+zmodule mh-firouzjah/tokyo-night
+
+# Load syntax highlighting after modules that add or wrap ZLE widgets.
+zmodule zsh-users/zsh-history-substring-search
+zmodule zsh-users/zsh-autosuggestions
+zmodule zsh-users/zsh-syntax-highlighting

@@ -1,108 +1,31 @@
-# Zsh Configuration
+# Mahdi's Zsh Configuration with Zim
 
-This is a custom Zsh configuration that includes a variety of useful features and customizations.
+A lean Zim-based continuation of Mahdi's Manjaro-derived Zsh configuration. This repository contains the personal shell setup, not the Zim framework itself. Zim manages completions, input, terminal titles, Git prompt data, syntax highlighting, history search, autosuggestions, and the separately published Tokyo Night prompt theme.
 
-It's designed to work on Linux and macOS systems and can be easily installed and customized to suit your needs.
+## Prompt
 
-Also it is inspired by `mankaro-zsh-configuration` but it supports all Linux Distributions. The following is screenshot of Kubuntu terminal:
+The one-line prompt shows the Fedora mark by default, current path, Git branch/status, active Python environment, command duration, nonzero exit code, then `⮞` (or `⮞#` for root). Set `TOKYO_NIGHT_DISTRO_SYMBOL` to use another Nerd Font distro glyph. It has no right prompt or background color. The theme is installed as the separate Zim module `mh-firouzjah/tokyo-night`.
 
-![Screenshot](./Screenshot.png)
+Verbose Git status shows file counts by default. Set `TOKYO_NIGHT_GIT_VERBOSE=0` to keep staged and unstaged markers without counts; untracked markers are unavailable in that mode. The theme has an optional Nord palette in its own repository.
 
-## Features
+## Files
 
-Some of the notable features included in this configuration are:
+- `.zshrc`: Zim bootstrap and initialization
+- `.zimrc`: selected modules and load order
+- `config.zsh`: history, shell options, completion preferences, aliases, environment, and `less` colors
+- `keys.zsh`: selected bindings loaded after Zim input
+- `mh-firouzjah/tokyo-night`: separately published prompt theme, loaded from `.zimrc`
 
-- A custom prompt that includes `Git integration` and the ability to display the current `Python virtual environment`.
-- A variety of useful aliases and functions, including shortcuts for common commands like `ls`, `cd`, and `grep`.
-- Auto-completion for many common commands and options.
-- Syntax highlighting for commands and file types.
-- Suggestion to install possible packages on command not found situations.
+The key map keeps Emacs mode, Ctrl+Backspace, PageUp/PageDown prefix history, Up/Down substring history, Home/End, Insert/Delete, Ctrl+Arrow word navigation, and Shift+Tab undo. These bindings were adapted from the user's Manjaro-derived setup. NVM is named but not eagerly loaded.
 
-## Installation
+`config.zsh` also carries personal settings from the current `.zshrc`: PATH and history setup, completion preferences, Git shortcuts, `ls`/`eza`, DNF update and `journalctl` aliases, `LESS` colors, and syntax-highlighting preferences. `dnf-list-updates` requires DNF, `journalctl` requires systemd, and the `ls` alias expects `eza`.
 
-### Preparations
+## Install
 
-- Install required packages
-  - Arch Linux
+Back up your current `.zshrc` and `.zimrc` first. Copy this repository's `.zshrc` and `.zimrc` to your home directory. Copy `config.zsh` and `keys.zsh` to `~/.config/zsh/`. The `.zimrc` loads `mh-firouzjah/tokyo-night` after its prompt-data modules. Start a new shell; Zim installs missing modules. To undo, restore the backups and restart the shell.
 
-    ```sh
-    sudo pacman -S pkgfile
-    ```
+First module install needs network access. The prompt was smoke-tested in an isolated temporary HOME using locally cached Zim modules. Python virtualenv display, staged Git changes, failure status, and long-command duration rendered as expected. Root rendering and startup performance have not been benchmarked. No live home config was replaced.
 
-    - Update `pkgfile` database so to be able to recommend packages
+## Attribution
 
-      ```sh
-      pkgfile -u
-      ```
-
-  - Debian/Ubuntu
-
-    ```sh
-    sudo apt install command-not-found
-    ```
-
-### Automatic Installation
-
-- Use the command bellow:
-
-  ```sh
-  bash <(curl -s https://raw.githubusercontent.com/mh-firouzjah/zsh-config/master/install.sh)
-  ```
-
-### Manual Installation
-
-To install this configuration manually, follow these steps:
-
-- Clone required repositories to your home directory
-
-  ```sh
-  git clone https://github.com/mh-firouzjah/zsh-config.git $HOME/.zsh
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.zsh/plugins/powerlevel10k
-  git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.zsh/plugins/zsh-autosuggestions
-  git clone https://github.com/zsh-users/zsh-completions $HOME/.zsh/plugins/zsh-completions
-  git clone https://github.com/zsh-users/zsh-history-substring-search $HOME/.zsh/plugins/zsh-history-substring-search
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.zsh/plugins/zsh-syntax-highlighting
-  ```
-
-- Copy the `.zshrc` file to your home directory
-
-  ```sh
-  cp $HOME/.zsh/.zshrc $HOME/.zshrc
-  ```
-
-### Finally
-
-- Restart your terminal or run `source $HOME/.zshrc` to apply the changes.
-
-### Exception
-
-- If powerlevel10k is asking for and generating a new prompt interface
-different from what is manjaro's default zsh theme,
-copy `./p10k.zsh` to the home directory of appropriate user.
-
-  ```sh
-  cp $HOME/.zsh/modules/p10k.zsh $HOME/.p10k.zsh
-  ```
-
-- If your terminal does not support `p10k.zsh` try:
-
-  ```sh
-  cp $HOME/.zsh/modules/p10k-portable.zsh $HOME/.p10k.zsh
-  ```
-
-## Customization
-
-This configuration can be easily customized to suit your needs. Simply edit the .zshrc file to add or modify
-aliases, functions, or other settings.
-
-You can also add additional files to the zsh-config directory and source them from the .zshrc file.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-This configuration is based on the work of talented developers and contributors in the Zsh community.
-Special thanks to [Chrysostomus ↗](https://github.com/Chrysostomus/manjaro-zsh-config)
-for the original manjaro-zsh-config project that inspired this configuration.
+This Zim migration and its documentation were prepared with extensive assistance from OpenAI Codex, under Mahdi's direction and review. Personal settings and selected key bindings are derived from Mahdi's configuration. The prompt theme is a separate project; its Tokyo Night palette attribution and license are documented in its own repository.
